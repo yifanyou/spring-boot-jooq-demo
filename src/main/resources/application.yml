@@ -16,9 +16,9 @@ spring:
 #Database Configuration
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.159.130:3306/jooqdb
-    username: mysql
-    password: Mysql#123
+    url: jdbc:mysql://${MYSQL_HOST:192.168.159.130}:3306/jooqdb
+    username: ${MYSQL_USERNAME:mysql}
+    password: ${MYSQL_PASSWORD:Mysql#123}    
     initialize: false
     continueOnError: true
 # JOOQ
